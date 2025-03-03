@@ -35,14 +35,17 @@
             saveToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
             newToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // textArea
             // 
-            textArea.Location = new Point(11, 43);
+            textArea.Dock = DockStyle.Fill;
+            textArea.Font = new Font("JetBrains Mono ExtraBold", 13.8749981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textArea.Location = new Point(0, 39);
             textArea.Name = "textArea";
-            textArea.Size = new Size(1544, 848);
+            textArea.Size = new Size(1689, 836);
             textArea.TabIndex = 0;
             textArea.Text = "";
             // 
@@ -52,45 +55,54 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1568, 40);
+            menuStrip1.Size = new Size(1689, 39);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { saveToolStripMenuItem, openToolStripMenuItem, newToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { saveToolStripMenuItem, openToolStripMenuItem, newToolStripMenuItem, aboutToolStripMenuItem });
+            fileToolStripMenuItem.Font = new Font("JetBrains Mono ExtraBold", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(67, 36);
+            fileToolStripMenuItem.Size = new Size(90, 35);
             fileToolStripMenuItem.Text = "file";
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(202, 44);
+            saveToolStripMenuItem.Size = new Size(217, 44);
             saveToolStripMenuItem.Text = "save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(202, 44);
+            openToolStripMenuItem.Size = new Size(217, 44);
             openToolStripMenuItem.Text = "open";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
             // newToolStripMenuItem
             // 
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(202, 44);
+            newToolStripMenuItem.Size = new Size(217, 44);
             newToolStripMenuItem.Text = "new";
             newToolStripMenuItem.Click += newToolStripMenuItem_Click;
             // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(217, 44);
+            aboutToolStripMenuItem.Text = "about";
+            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(14F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1568, 903);
+            ClientSize = new Size(1689, 875);
             Controls.Add(textArea);
             Controls.Add(menuStrip1);
+            Font = new Font("JetBrains Mono ExtraBold", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "Form1";
@@ -109,5 +121,6 @@
         private ToolStripMenuItem saveToolStripMenuItem;
         private ToolStripMenuItem openToolStripMenuItem;
         private ToolStripMenuItem newToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

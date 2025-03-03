@@ -31,5 +31,10 @@ namespace JFtextCs
         {
             this.textArea.Text = string.Empty;
         }
+        public void aboutToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            AboutBox1 aboutBox = new AboutBox1();
+            aboutBox.ShowDialog();
+        }
     }
 }
