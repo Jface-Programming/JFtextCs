@@ -28,43 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             textArea = new RichTextBox();
-            button1 = new Button();
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            saveToolStripMenuItem = new ToolStripMenuItem();
+            openToolStripMenuItem = new ToolStripMenuItem();
+            newToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // textArea
             // 
-            textArea.Location = new Point(11, 64);
+            textArea.Location = new Point(11, 43);
             textArea.Name = "textArea";
-            textArea.Size = new Size(1544, 827);
+            textArea.Size = new Size(1544, 848);
             textArea.TabIndex = 0;
             textArea.Text = "";
             // 
-            // button1
+            // menuStrip1
             // 
-            button1.Location = new Point(12, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 46);
-            button1.TabIndex = 1;
-            button1.Text = "save";
-            button1.UseVisualStyleBackColor = true;
+            menuStrip1.ImageScalingSize = new Size(32, 32);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1568, 40);
+            menuStrip1.TabIndex = 1;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { saveToolStripMenuItem, openToolStripMenuItem, newToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(67, 36);
+            fileToolStripMenuItem.Text = "file";
+            // 
+            // saveToolStripMenuItem
+            // 
+            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.Size = new Size(202, 44);
+            saveToolStripMenuItem.Text = "save";
+            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
+            // 
+            // openToolStripMenuItem
+            // 
+            openToolStripMenuItem.Name = "openToolStripMenuItem";
+            openToolStripMenuItem.Size = new Size(202, 44);
+            openToolStripMenuItem.Text = "open";
+            openToolStripMenuItem.Click += openToolStripMenuItem_Click;
+            // 
+            // newToolStripMenuItem
+            // 
+            newToolStripMenuItem.Name = "newToolStripMenuItem";
+            newToolStripMenuItem.Size = new Size(202, 44);
+            newToolStripMenuItem.Text = "new";
+            newToolStripMenuItem.Click += newToolStripMenuItem_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1568, 903);
-            Controls.Add(button1);
             Controls.Add(textArea);
+            Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "JFtext";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            PerformLayout();
         }
 
         #endregion
 
         private RichTextBox textArea;
-        private Button button1;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem saveToolStripMenuItem;
+        private ToolStripMenuItem openToolStripMenuItem;
+        private ToolStripMenuItem newToolStripMenuItem;
     }
 }
