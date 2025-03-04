@@ -100,7 +100,6 @@
             labelVersion.Name = "labelVersion";
             labelVersion.Size = new Size(587, 42);
             labelVersion.TabIndex = 0;
-            labelVersion.Text = "1.0.1";
             labelVersion.TextAlign = ContentAlignment.MiddleLeft;
             labelVersion.Click += labelVersion_Click;
             // 
@@ -172,9 +171,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.PictureBox logoPictureBox;
         private System.Windows.Forms.Label labelProductName;
-        private System.Windows.Forms.Label labelVersion;
         private System.Windows.Forms.Label labelCompanyName;
         private System.Windows.Forms.Button okButton;
         private TextBox textBoxDescription;
+        private Label labelVersion;
     }
 }

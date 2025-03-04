@@ -1,8 +1,3 @@
-using System.Drawing.Text;
-using System.Security.Cryptography.X509Certificates;
-using System.IO;
-using System;
-
 namespace JFtextCs
 {
     public partial class Form1 : Form
@@ -11,7 +6,7 @@ namespace JFtextCs
         {
             InitializeComponent();
         }
-       private void saveToolStripMenuItem_Click(object sender, System.EventArgs e)
+        private void saveToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
             SaveFileDialog saveDialog = new SaveFileDialog();
             saveDialog.Filter = "text files|*.txt";
@@ -35,6 +30,31 @@ namespace JFtextCs
         {
             AboutBox1 aboutBox = new AboutBox1();
             aboutBox.ShowDialog();
+        }
+        private void exitToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
+        private void undoToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            textArea.Undo();
+        }
+        private void redoToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            textArea.Redo();
+        }
+        private void wrapFalseToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            textArea.WordWrap = false;
+        }
+        private void wrapTrueToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            textArea.WordWrap = true;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
